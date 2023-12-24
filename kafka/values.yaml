@@ -1,0 +1,17 @@
+# Default values for kafka.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 3
+
+environment:
+  clusterID: my-kafkacluster-xyz
+  defaultReplicationFactor: 3
+  defaultMinimumInSyncReplica: 2
+  
+service:
+  type: LoadBalancer
+  externalPort: 9092
+  internalPort: 9093
+
+storage: 1Gi
